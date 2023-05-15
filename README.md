@@ -51,10 +51,8 @@ You can also define optional parameters and query parameters. Update the code as
  > `def read_item(item_id: int, q: Optional[str] = None): `
  
  >       if q:
- 
- >          return {"item_id": item_id, "q": q}
- 
- >       return {"item_id": item_id}
+  >          return {"item_id": item_id, "q": q}
+  >       return {"item_id": item_id}
       
 In this case, the q parameter is optional and has a default value of None. If a query parameter q is provided in the URL, it will be included in the response.<br>
 Query parameters are appended to the URL using a ? character, followed by key-value pairs separated by &. They are used to provide additional optional data to the API.
