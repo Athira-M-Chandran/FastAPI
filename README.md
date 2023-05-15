@@ -11,12 +11,11 @@ Make sure you have Python 3.7 or above installed. You can create a virtual envir
 Step 2: Hello World<br>
 Create a new Python file, for example, main.py, and open it in a text editor. Add the following code to create a basic FastAPI application and define a simple route:
 
->`from fastapi import FastAPI<br>
- > app = FastAPI()
-
-  > @app.get("/")<br>
-  > def read_root():<br>
-  >  <t> return {"Hello": "World"}`
+>    from fastapi import FastAPI<br>
+>     app = FastAPI()
+>     @app.get("/")<br>
+>     def read_root():<br>
+>         return {"Hello": "World"}
     
 This code sets up a FastAPI application and defines a route at the root URL ("/") using the @app.get decorator.<br> The function read_root() is executed when a GET request is made to the root URL and returns a JSON response.
 
@@ -33,11 +32,9 @@ Open your web browser and navigate to http://localhost:8000. You should see the 
 Step 5: Adding Request Parameters<br>
 FastAPI makes it easy to handle request parameters. Modify the code in main.py to include a route that accepts a parameter:
 
-> `@app.get("/items/{item_id}") `
-
->  `def read_item(item_id: int): `
-
->    ` return {"item_id": item_id}`
+>      @app.get("/items/{item_id}")
+>      def read_item(item_id: int): 
+>          return {"item_id": item_id}
 
 In this example, the route "/items/{item_id}" expects an integer parameter called item_id. The parameter is automatically validated and converted to the appropriate type.
 
