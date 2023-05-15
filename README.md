@@ -12,11 +12,11 @@ Step 2: Hello World<br>
 Create a new Python file, for example, main.py, and open it in a text editor. Add the following code to create a basic FastAPI application and define a simple route:
 
 >`from fastapi import FastAPI
-  app = FastAPI()
+ > app = FastAPI()
 
-  @app.get("/")
-  def read_root():
-    return {"Hello": "World"}`
+  > @app.get("/")
+  > def read_root():
+    > return {"Hello": "World"}`
     
 This code sets up a FastAPI application and defines a route at the root URL ("/") using the @app.get decorator. The function read_root() is executed when a GET request is made to the root URL and returns a JSON response.
 
