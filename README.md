@@ -33,28 +33,28 @@ Open your web browser and navigate to http://localhost:8000. You should see the 
 Step 5: Adding Request Parameters<br>
 FastAPI makes it easy to handle request parameters. Modify the code in main.py to include a route that accepts a parameter:
 
-> `@app.get("/items/{item_id}") 
+> `@app.get("/items/{item_id}") `
 
->  def read_item(item_id: int): 
+>  `def read_item(item_id: int): `
 
->     return {"item_id": item_id}`
+>    ` return {"item_id": item_id}`
 
 In this example, the route "/items/{item_id}" expects an integer parameter called item_id. The parameter is automatically validated and converted to the appropriate type.
 
 Step 6: Optional Parameters and Query Parameters <br>
 You can also define optional parameters and query parameters. Update the code as follows:
 
->`from typing import Optional 
+>`from typing import Optional '
 
->  @app.get("/items/{item_id}")
+>  `@app.get("/items/{item_id}")`
  
- > def read_item(item_id: int, q: Optional[str] = None): 
+ > `def read_item(item_id: int, q: Optional[str] = None): `
  
- >    if q:
+ >      `if q:`
  
- >       return {"item_id": item_id, "q": q} 
+ >          `return {"item_id": item_id, "q": q} `
  
- >    return {"item_id": item_id}`
+ >       `return {"item_id": item_id}`
       
 In this case, the q parameter is optional and has a default value of None. If a query parameter q is provided in the URL, it will be included in the response.<br>
 Query parameters are appended to the URL using a ? character, followed by key-value pairs separated by &. They are used to provide additional optional data to the API.
