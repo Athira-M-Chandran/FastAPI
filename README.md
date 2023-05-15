@@ -56,3 +56,14 @@ For example, to pass the q parameter in the URL, you can do as follows:<br>
 
 In this case, 42 is the value for the item_id parameter, and test is the value for the q parameter.
 
+Step 7: Request Bodies<br>
+FastAPI supports handling request bodies. Let's modify the code to include a POST route that expects a JSON request body:
+
+>         from pydantic import BaseModel
+>         class Item(BaseModel):
+>               name: str
+>               price: float
+>         @app.post("/items/")
+>         def create_item(item: Item):
+>                return item
+
